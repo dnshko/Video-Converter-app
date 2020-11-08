@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:clickable="true"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    tools:context=".fragments.VideoGifFragment">
+
+    <RelativeLayout
+        android:id="@+id/relativeVideoGif"
+        android:background="@color/colorGray"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/bottom_bar"
+            android:layout_alignParentBottom="true"
+            android:layout_height="wrap_content"
+            android:padding="3dp"
+            android:layout_width="match_parent"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                app:cardUseCompatPadding="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:background="@drawable/ic_play"
+                    android:id="@+id/tutorialplay"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="@dimen/work_button_width"
+                    android:layout_width="@dimen/work_button_width" />
+
+                <TextView
+                    android:id="@+id/txt_playtime"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:text="00:00"
+                    android:textAlignment="center"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="#000000" />
+
+                <com.crystal.crystalrangeseekbar.widgets.CrystalRangeSeekbar
+                    android:id="@+id/rangeSeekBar"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:layout_width="0dp"
+                    app:bar_color="@color/colorBar"
+                    app:left_thumb_color="@color/colorThumb"
+                    app:right_thumb_color="@color/colorThumb"
+                    app:bar_highlight_color="@color/colorBarHighlight"
+                    app:left_thumb_color_pressed="@color/colorThumbPressed"
+                    app:right_thumb_color_pressed="@color/colorThumbPressed"
+                    app:corner_radius="10"
+                    app:data_type="_integer"
+                    app:max_value="100"
+                    app:min_value="0"
+                    app:steps="5" />
+
+                <TextView
+                    android:id="@+id/txt_totaltime"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:text="00:00"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginStart="5dp"
+                    android:textAlignment="center"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="#000000" />
+
+            </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:layout_width="wrap_content"
+                    app:useCompatPadding="true"
+                    android:layout_gravity="start"
+                    android:id="@+id/fabExpand"
+                    android:src="@drawable/ic_expand"
+                    android:layout_height="wrap_content" />
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:layout_width="wrap_content"
+                    app:useCompatPadding="true"
+                    android:layout_gravity="end"
+                    android:id="@+id/fabDone"
+                    android:src="@drawable/ic_done"
+                    android:layout_height="wrap_content" />
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/video_bar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/bottom_bar"
+            app:cardUseCompatPadding="true"
+            app:cardElevation="5dp"
+            app:cardBackgroundColor="@color/cardview_dark_background">
+
+            <VideoView
+                android:id="@+id/videoView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fabCollapse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:visibility="gone"
+                android:src="@drawable/ic_collapse"
+                app:useCompatPadding="true" />
+
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/ivPreview"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</RelativeLayout>

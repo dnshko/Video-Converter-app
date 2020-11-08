@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/action_gif"
+        android:icon="@drawable/ic_gif_file"
+        android:title="My Gifs" />
+    <item android:id="@+id/action_jpg"
+        android:icon="@drawable/ic_jpg_file"
+        android:title="My Images" />
+    <item android:id="@+id/action_audio"
+        android:icon="@drawable/ic_music_player"
+        android:title="My Audios" />
+    <item android:id="@+id/action_video"
+        android:icon="@drawable/ic_play_circle"
+        android:title="My Videos" />
+</menu>

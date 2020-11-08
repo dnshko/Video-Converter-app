@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--<color name="colorPrimary">#FF9800</color>-->
+    <!--<color name="colorPrimaryDark">#F57C00</color>-->
+    <!--<color name="colorAccent">#BF360C</color>-->
+
+    <!--<color name="colorPrimary">#005bb4</color>-->
+    <!--<color name="colorPrimaryDark">#02417e</color>-->
+    <!--<color name="colorAccent">#02274b</color>-->
+
+    <!--<color name="colorPrimary">#795548</color>-->
+    <!--<color name="colorPrimaryDark">#5d4037</color>-->
+    <!--<color name="colorAccent">#bf360c</color>-->
+
+    <!--<color name="colorPrimary">#F5C851</color>-->
+    <!--<color name="colorPrimaryDark">#e1b74a</color>-->
+    <!--<color name="colorAccent">#0E4375</color>-->
+
+    <color name="colorPrimary">#b71c1c</color>
+    <color name="colorPrimaryDark">#bdbdbd</color>
+    <color name="colorAccent">#d50000</color>
+
+    <!--<color name="colorPrimary">#ffa000</color>-->
+    <!--<color name="colorPrimaryDark">#c2c4c9</color>-->
+    <!--<color name="colorAccent">#ffa000</color>-->
+
+
+
+    <color name="colorBule">#005bb4</color>
+    <color name="colorGray">#dedede</color>
+    <color name="colorGray1">#efefef</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorBlack1">#80000000</color>
+    <color name="colorWhite">#FFFFFF</color>
+
+    <color name="colorPlayerBack">#80000000</color>
+
+    <!--<color name="colorBar">#f795b6</color>-->
+    <!--<color name="colorBarHighlight">#FF4081</color>-->
+    <!--<color name="colorThumb">#6e1432</color>-->
+    <!--<color name="colorThumbPressed">#FF4081</color>-->
+
+    <color name="colorBar">@color/colorPrimaryDark</color>
+    <color name="colorBarHighlight">@color/colorPrimary</color>
+    <color name="colorThumb">@color/colorAccent</color>
+    <color name="colorThumbPressed">@color/colorAccent</color>
+
+    <color name="negateLuminance">#66a3b7ca</color>
+    <color name="goldenHour">#66C9C431</color>
+    <color name="paleRed">#66D845E8</color>
+    <!--<color name="paleRed">#80bd65c7</color>-->
+    <color name="lanTern">#66F4BA6C</color>
+    <color name="jungle">#6668e793</color>
+    <color name="starryNight">#667C64E1</color>
+    <!--<color name="starryight">#7c64e1</color>-->
+
+</resources>

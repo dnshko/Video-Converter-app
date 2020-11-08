@@ -1,0 +1,46 @@
+<resources>
+    <string name="app_name">Video Utility</string>
+    <string name="admob_app_id">ca-app-pub-9134781771825641~4618836907</string>
+    <string name="banner_ad_id">ca-app-pub-9134781771825641/9735023097</string>
+    <string name="interstitial_ad_id">ca-app-pub-9134781771825641/3298016370</string>
+
+    <string name="banner_test_ad_id">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="interstitial_test_ad_id">ca-app-pub-3940256099942544/1033173712</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="video_to_gif">Video to GIF</string>
+    <string name="images_to_gif">Images to GIF</string>
+    <string name="video_to_audio">Video to Audio</string>
+    <string name="capture_image">Capture Image</string>
+    <string name="slowMotion">Motion</string>
+    <string name="video_cutter">Video Cutter</string>
+    <string name="video_filter">Video Filter</string>
+    <string name="gallery">Gallery</string>
+    <string name="filter">Filter</string>
+    <string name="confirm">Confirm</string>
+    <string name="loading">Loading…</string>
+    <string name="open_camera">Open Camera</string>
+    <string name="open_gallery">Open Gallery</string>
+    <string name="no_data_found">No Data Found</string>
+    <string name="select_preset">Select Preset</string>
+    <string name="select_quality">Select Quality</string>
+    <string name="please_wait">Please wait…</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="slow_motion">Slow Motion</string>
+    <string name="fast_motion">Fast Motion</string>
+    <string name="reverse">Reverse</string>
+    <string name="watermark_video">Watermark Video</string>
+    <string name="choose_image">Choose Image</string>
+    <string name="txt_convert">Convert</string>
+    <string name="txt_selectposition">Select Position</string>
+    <string name="top_left">Top Left</string>
+    <string name="top_right">Top RIGHT</string>
+    <string name="bottom_left">Bottom Left</string>
+    <string name="bottom_right">Bottom Right</string>
+
+
+    // for filter
+    <string name="filterbtn">Apply Filter</string>
+</resources>

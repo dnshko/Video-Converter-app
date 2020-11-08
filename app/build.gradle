@@ -1,0 +1,94 @@
+buildscript {
+    repositories {
+        maven { url 'https://maven.fabric.io/public' }
+    }
+
+    dependencies {
+        classpath 'io.fabric.tools:gradle:1.+'
+    }
+}
+apply plugin: 'com.android.application'
+apply plugin: 'io.fabric'
+
+repositories {
+    maven { url 'https://maven.fabric.io/public' }
+}
+
+
+android {
+    signingConfigs {
+        config {
+            keyAlias 'videoconverter'
+            keyPassword 'VideoConverter123'
+            storeFile file('/home/nteam/AndroidStudioProjects/KK_BackUp/app_resources/videoutility_resources/videoconverter_keystore.jks')
+            storePassword 'VideoConverter123'
+        }
+    }
+    compileSdkVersion 29
+    buildToolsVersion '29.0.3'
+    defaultConfig {
+        applicationId "com.elsner.VideoConverter"
+        minSdkVersion 16
+        targetSdkVersion 29
+        versionCode 12
+        versionName '1.7' // bitmap issue solved
+        ndk.abiFilters 'armeabi-v7a', 'arm64-v8a', 'x86', 'x86_64'
+    }
+    buildTypes {
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
+        }
+    }
+    applicationVariants.all { variant ->
+        if (variant.buildType.name == 'release') {
+            variant.mergeAssets.doLast {
+                delete(fileTree(dir: variant.mergeAssets.outputDir, includes: ['x86/ffmpeg', '**/*.ffmpeg']))
+            }
+        }
+    }
+    packagingOptions {
+        exclude 'lib/arm64-v8a/libARM_ARCH.so'
+        exclude 'lib/armeabi/libARM_ARCH.so'
+        exclude 'lib/armeabi-v7a/libARM_ARCH.so'
+        exclude 'lib/x86/libARM_ARCH.so'
+        exclude 'lib/x86_64/libARM_ARCH.so'
+    }
+}
+
+configurations.all {
+    resolutionStrategy.eachDependency { DependencyResolveDetails details ->
+        def requested = details.requested
+        if (requested.group == 'com.android.support') {
+            if (!requested.name.startsWith("multidex")) {
+                details.useVersion '27.1.1'
+            }
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'com.google.android.material:material:1.1.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'com.github.bumptech.glide:glide:4.7.1'
+    implementation 'com.crystal:crystalrangeseekbar:1.1.3'
+    implementation project(':Multimager')
+
+    implementation 'com.writingminds:FFmpegAndroid:0.3.2'
+    implementation 'com.google.android.gms:play-services-ads:19.1.0'
+    implementation 'mobi.upod:time-duration-picker:1.1.3'
+    implementation('com.crashlytics.sdk.android:crashlytics:2.10.1@aar') {
+        transitive = true;
+    }
+
+}
